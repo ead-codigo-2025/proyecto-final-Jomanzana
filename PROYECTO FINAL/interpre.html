@@ -1,0 +1,79 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interpretación gráfica — Josefa Maldonado</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style7.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Proyectos</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="galeria">
+    <h1>INTERPRETACIÓN GRÁFICA</h1>
+    <h2>SECUENCIA DEL FILM "À VALPARAÍSO", JORIS IVENS</h2>
+    <section class="categoria scroll-horizontal">
+      <h3>Proyecto Taller de creación impresa 2023</h3>
+      <div class="imagenes">
+        <img src="tci2023.png" alt="Proyecto Taller de creación impresa 2023">
+        <img src="tci20232.png" alt="Proyecto Taller de creación impresa 2023">
+        <img src="tci20233.png" alt="Proyecto Taller de creación impresa 2023">
+        <img src="tci20234.png" alt="Proyecto Taller de creación impresa 2023">
+      </div>
+    </section>
+    <section class="categoria">
+      <h3>¿De qué trata?</h3>
+      <p>El estudio sobre la ciudad de Valparaíso surge desde la curiosidad por conocer e indagar en sus múltiples capas de significado. A través de una mirada que se nutre de las incógnitas del entorno, se revelan nuevas formas de comprender lo cotidiano. Al alejarnos de lo habitual y observar desde otra perspectiva, emergen instantes cargados de valor, capaces de invitarnos a contemplar la ciudad con una sensibilidad renovada.</p>
+      <p>Para adentrarnos en este viaje, tomamos como punto de partida el film "À Valparaíso", dirigido por Joris Ivens. Su mirada cinematográfica nos permitió descubrir la esencia de la ciudad, su ritmo,  identidad y pulso vital. A partir de esa experiencia, se buscó construir un diálogo entre pasado y presente, asumiendo el desafío de transmitir lo que verdaderamente significa Valparaíso: un territorio en constante movimiento, lleno de historia, memoria y transformación.</p>
+    <section class="categoria">
+      <h3>Presentación video</h3>
+  <div class="video-wrapper">
+    <div class="video-responsive">
+      <iframe
+       src="https://www.youtube.com/embed/FgoQR1CghXw?rel=0&showinfo=0"
+        title="Presentación — À Valparaíso"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</section>
+  <section class="categoria">
+      <h3>Link Wiki</h3>
+  <p><a href="https://wiki.ead.pucv.cl/C2:_TCI_2023_Maldonado_Josefa_-_Interpretaci%C3%B3n_gr%C3%A1fica_de_una_secuencia_del_film_%22%C3%80_Valpara%C3%ADso%22_de_Joris_Ivens">Proyecto Ciclo 2 Taller de Creación Impresa</a><p></p>     
+</section>
+    </section>
+  </main>
+  <div id="modal" class="modal">
+    <span class="cerrar">&times;</span>
+    <img class="modal-contenido" id="imagenAmpliada">
+  </div>
+  <script>
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("imagenAmpliada");
+    const cerrar = document.querySelector(".cerrar");
+    document.querySelectorAll(".imagenes img").forEach(img => {
+      img.addEventListener("click", () => {
+        modal.style.display = "flex";
+        modalImg.src = img.src;
+      });
+    });
+    cerrar.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) modal.style.display = "none";
+    });
+  </script>
+</body>
+</html>

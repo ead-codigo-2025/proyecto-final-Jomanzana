@@ -1,0 +1,77 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avispados — Josefa Maldonado</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style8.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Proyectos</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="galeria">
+    <h1>AVISPADOS</h1>
+    <h2>TALLER DE DISEÑO DE INTERACCIÓN</h2>
+    <section class="categoria scroll-horizontal">
+      <h3>Proyecto final Taller</h3>
+      <div class="imagenes">
+        <img src="IMG_9878.JPG" alt="Proyecto final Taller">
+        <img src="IMG_9857.JPG" alt="Proyecto final Taller">
+        <img src="IMG_9880.JPG" alt="Proyecto final Taller">
+        <img src="IMG_9861.JPG" alt="Proyecto final Taller">
+      </div>
+    </section>
+    <section class="categoria">
+      <h3>Reglas del juego</h3>
+      <h4>Preparación</h4>
+      <p>Distribución de panales: Ajusta la cantidad de panales según la dificultad elegida.</p>
+      <p>Definir roles y entregar la Orden de la Reina:</p>
+      <p>Reparte cartas de Roles al azar. Puedes ser abeja o avispa. ¡El rol es secreto!</p>
+      <p>Las avispas deben evitar que las abejas sobrevivan al invierno. Las abejas deben recolectar recursos.</p>
+      <p>La Orden de la Reina establece limitaciones y patrones para los panales. Estos se deberán cumplir para ganar el juego.</p>
+      <h4>Desarrollo del juego</h4>
+      <p>Turnos y estaciones:</p>
+      <p>Los turnos se muestran en el arbusto central y están definidos por las estaciones del año, comenzando en primavera y terminando en invierno.</p>
+      <p>Los turnos alternan entre abejas (2 minutos) y avispas (30 segundos).</p>
+      <p>Las cartas de endulzamiento (abejas) y envenenamiento (avispas) se usan durante los turnos. No se pueden acomodar fichas mientras se cumple una tarea de carta.</p>
+      <p>Las avispas pueden atacar en cualquier momento y directamente en su turno.</p>
+      <p>Las abejas deben cerrar los ojos durante el turno de las avispas, todos los jugadores contarán en voz alta hasta 30 para mantener en cuenta el tiempo de las avispas y saber cuando abrir los ojos y las avispas cuando termina la jugada.</p>
+      <h4>FIN DEL JUEGO</h4>
+      <p>El juego termina en invierno. Verifica el cumplimiento de la Orden de la Reina, cada tablero vale 20 puntos por lo cual dependiendo de la cantidad de tableros en la mesa esos determinarán el puntaje total.</p>
+     <section class="categoria">
+     <section class="categoria">
+    <h3>Link Wiki</h3>
+    <p><a href="https://wiki.ead.pucv.cl/AvispadoS">Proyecto Final Taller de diseño de Interacción</a><p></p>
+    </section>
+  </main>
+  <div id="modal" class="modal">
+    <span class="cerrar">&times;</span>
+    <img class="modal-contenido" id="imagenAmpliada">
+  </div>
+  <script>
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("imagenAmpliada");
+    const cerrar = document.querySelector(".cerrar");
+    document.querySelectorAll(".imagenes img").forEach(img => {
+      img.addEventListener("click", () => {
+        modal.style.display = "flex";
+        modalImg.src = img.src;
+      });
+    });
+    cerrar.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) modal.style.display = "none";
+    });
+  </script>
+</body>
+</html>

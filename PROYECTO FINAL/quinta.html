@@ -1,0 +1,66 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quinta en ruta — Josefa Maldonado</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style8.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Proyectos</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="galeria">
+    <h1>QUINTA EN RUTA</h1>
+    <h2>DISEÑO DE EXPERIENCIA DE USUARIO</h2>
+    <section class="categoria scroll-horizontal">
+      <h3>Proyecto final Científico Técnico</h3>
+      <div class="imagenes">
+        <img src="Inicio App.png" alt="Proyecto final Científico Técnico">
+        <img src="Haz tu recorrido.jpg" alt="Proyecto final Científico Técnico">
+        <img src="VALORACIONES 1.png" alt="Proyecto final Científico Técnico">
+        <img src="GUÍA PASAJERO.png" alt="Proyecto final Científico Técnico">
+      </div>
+    </section>
+    <section class="categoria">
+      <h3>¿De qué trata?</h3>
+      <p>Es una app móvil, informativa que les brinda a los usuarios de las micros de la V región, toda la iformación necesaria durante el recorrido. En ella puedes encontrar noticias y alertas y noticias actualizadas, para saber qué esta ocurriendo en la ciudad y cómo afecta tu recorrido. También puedes encontrar</p>
+     <section class="categoria">
+        <section class="categoria">
+      <h3>Objetivo</h3>
+      <p>“Quinta en Ruta” Más que una app de transporte, es una herramienta informativa y participativa que busca mejorar la experiencia de desplazamiento brindando confianza y seguridad, pero también permite valorar los recorridos, acceder a recomendaciones e información en caso de emergencias, y aportar con opiniones y experiencias. De este modo, ayuda a construir un servicio de transporte mejor, basado en la colaboración y las necesidades reales de sus usuarios.</p>
+     <section class="categoria">
+    <h3>Link Wiki</h3>
+    <p><a href="https://wiki.ead.pucv.cl/Entrega_final_-_Aplicaci%C3%B3n_Quinta_en_Ruta">Proyecto Final Diseño de experiencia de usuario</a><p></p>
+    </section>
+  </main>
+  <div id="modal" class="modal">
+    <span class="cerrar">&times;</span>
+    <img class="modal-contenido" id="imagenAmpliada">
+  </div>
+  <script>
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("imagenAmpliada");
+    const cerrar = document.querySelector(".cerrar");
+    document.querySelectorAll(".imagenes img").forEach(img => {
+      img.addEventListener("click", () => {
+        modal.style.display = "flex";
+        modalImg.src = img.src;
+      });
+    });
+    cerrar.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) modal.style.display = "none";
+    });
+  </script>
+</body>
+</html>
